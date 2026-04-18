@@ -1,0 +1,41 @@
+type UserId = principal;
+type Timestamp = int;
+type DonorInput = 
+ record {
+   age: nat;
+   bloodGroup: BloodGroup;
+   name: text;
+   phone: text;
+ };
+type Donor = 
+ record {
+   age: nat;
+   bloodGroup: BloodGroup;
+   id: UserId;
+   name: text;
+   phone: text;
+   registeredAt: Timestamp;
+ };
+type BloodGroup = 
+ variant {
+   ABNeg;
+   ABPos;
+   ANeg;
+   APos;
+   BNeg;
+   BPos;
+   ONeg;
+   OPos;
+ };
+service : {
+  getMyProfile: () -> (opt Donor) query;
+  registerDonor: (input: DonorInput) -> (variant {
+                                           err: text;
+                                           ok;
+                                         });
+  searchDonors: (bloodGroup: BloodGroup) -> (vec Donor) query;
+  updateDonor: (input: DonorInput) -> (variant {
+                                         err: text;
+                                         ok;
+                                       });
+}

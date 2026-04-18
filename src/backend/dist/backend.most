@@ -1,0 +1,26 @@
+// Version: 1.0.0
+type BloodGroup__758858436 =
+  {#ABNeg; #ABPos; #ANeg; #APos; #BNeg; #BPos; #ONeg; #OPos};
+type DonorInternal__780816367 =
+  {
+    var age : Nat;
+    var bloodGroup : BloodGroup__758858436;
+    id : UserId__794342819;
+    var name : Text;
+    var phone : Text;
+    registeredAt : Timestamp__353800967
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Timestamp__301639476 = Int;
+type Timestamp__353800967 = Timestamp__301639476;
+type UserId__158757552 = Principal;
+type UserId__794342819 = UserId__158757552;
+actor {
+  stable donors :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?DonorInternal__780816367]];
+      var elementIndex : Nat__490723111
+    }
+};

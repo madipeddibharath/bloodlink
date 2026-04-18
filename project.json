@@ -1,0 +1,20 @@
+{
+  "overview": "A blood donor registry website where users can register as donors with their name, phone number, age, and blood group. Anyone can search for donors by blood group and view their contact information to connect with matching donors.",
+  "features": [
+    "Donor registration with name, phone, age, and blood group",
+    "Secure login with Internet Identity",
+    "Search donors by blood group (A+, A-, B+, B-, AB+, AB-, O+, O-)",
+    "View donor contact cards with name and phone number",
+    "Personal profile dashboard",
+    "Responsive design for mobile and desktop"
+  ],
+  "category": "productivity",
+  "tags": [
+    "blood-donation",
+    "donor-registry",
+    "healthcare",
+    "community",
+    "search"
+  ],
+  "last_updated": "2026-04-13T14:42:26.215Z"
+}
